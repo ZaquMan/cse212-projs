@@ -35,13 +35,16 @@ public static class Algorithms {
     /// done the count is returned.
     /// </summary>
     /// <param name="size">the amount of work to do</param>
-    private static int Algorithm1(int size) {
+    private static int Algorithm1(int size)
+    {
         var count = 0;
         for (var i = 0; i < size; ++i)
             count += 1;
 
         return count;
     }
+
+    // Big O Estimate: O(n)
 
     /// <summary>
     /// The count variable is keeping track of the amount
@@ -57,6 +60,8 @@ public static class Algorithms {
 
         return count;
     }
+
+    // Big O Estimate: O(n^2)
 
     /// <summary>
     /// The count variable is keeping track of the amount
@@ -76,4 +81,6 @@ public static class Algorithms {
 
         return count;
     }
+    
+    //Big O Estimate: O(n) or less
 }
