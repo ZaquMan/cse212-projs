@@ -30,6 +30,8 @@ public static class StandardDeviation {
         return Math.Sqrt(variance);
     }
 
+// Big O: O(n)
+
     private static double StandardDeviation2(int[] numbers) {
         var sumSquaredDifferences = 0.0;
         var countNumbers = 0;
@@ -50,6 +52,8 @@ public static class StandardDeviation {
         return Math.Sqrt(variance);
     }
 
+// Big O: O(n^2)
+
     private static double StandardDeviation3(int[] numbers) {
         var count = numbers.Length;
         var avg = (double)numbers.Sum() / count;
@@ -62,3 +66,7 @@ public static class StandardDeviation {
         return Math.Sqrt(variance);
     }
 }
+
+// Big O: O(n)
+
+//O(2^n), O(n^2), O(n log(n)), O(n), O(log(n)), O(1)
