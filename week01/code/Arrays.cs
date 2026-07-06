@@ -13,7 +13,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        // Create an array of length "length"
+        // Loop "length" number of times, ending with a final loop when the iterator equals "length".
+        // Use ++i if starting with i = 0, or i++ if starting with i = 1
+        // Multiply the "number" by i and add it to the array 
+
+        var returns = new double[length];
+
+        for (int i = 0; i < length; i++)
+        {
+            returns[i] = (i + 1) * number;
+        }
+
+        return returns; // replace this return statement with your own
     }
 
     /// <summary>
@@ -29,5 +41,17 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+        // Create new, empty array that will be the returned array.
+        // Create temporary array that is a slice of the old array, starting at Length - Amount and going to the end.
+        // Copy temp array to "return" array.
+        // Create temporary array that is a slice of the old array from 0 to Length - Amount - 1, and append it to the return array
+
+        var temp = new List<int>();
+        temp.AddRange(data[(data.Count - amount)..]);
+        temp.AddRange(data[..(data.Count - amount)]);
+
+        data.Clear();
+        data.AddRange(temp[..]);
     }
 }
