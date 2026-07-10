@@ -29,6 +29,20 @@ public class CustomerService {
         Console.WriteLine("=================");
 
         // Add more Test Cases As Needed Below
+        
+        // Test 3
+        // Scenario: If the queue is full when trying to add a customer, then an error message will be displayed.
+        // Expected Result: Maximum Number of Customers in Queue.
+        Console.WriteLine("Test 3");
+
+        var test_queue = new CustomerService(1);
+        test_queue.AddNewCustomer();
+        test_queue.AddNewCustomer();
+
+        // Defect(s) Found: Did not stop customer
+
+        Console.WriteLine("=================");
+
     }
 
     private readonly List<Customer> _queue = new();
